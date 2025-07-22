@@ -4,9 +4,7 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     [SerializeField] GameObject obstaclePrefab;
-    [SerializeField] float obstacleSpawnTime = 1f;
-
-    int obstaclesSpawned = 0;
+    [SerializeField] float obstacleSpawnTime = 2f;
 
     void Start()
     {
@@ -15,11 +13,10 @@ public class ObstacleSpawner : MonoBehaviour
 
     IEnumerator SpawnObstacleRoutine()
     {
-        while (obstaclesSpawned < 5)
+        while (true)
         {
             yield return new WaitForSeconds(obstacleSpawnTime);
-            Instantiate(obstaclePrefab, transform.position, Quaternion.identity);
-            obstaclesSpawned++;
+            Instantiate(obstaclePrefab, transform.position, Random.rotation);
         }
     }
 }

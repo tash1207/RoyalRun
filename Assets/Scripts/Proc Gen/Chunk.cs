@@ -11,7 +11,7 @@ public class Chunk : MonoBehaviour
     float coinSpawnChance = 0.5f;
     float coinSeparationLength = 2f;
 
-    float[] lanes = { -2.5f, 0f, 2.5f };
+    float[] lanes = { -3f, 0f, 3f };
 
     List<int> availableLanes = new List<int> { 0, 1, 2 };
 

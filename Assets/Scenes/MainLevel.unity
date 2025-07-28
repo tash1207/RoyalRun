@@ -520,6 +520,8 @@ MonoBehaviour:
   startingChunksAmount: 12
   chunkLength: 10
   moveSpeed: 8
+  minMoveSpeed: 4
+  maxMoveSpeed: 26
 --- !u!4 &441968917
 Transform:
   m_ObjectHideFlags: 0
@@ -696,6 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1687092183}
+  adjustChunkMoveSpeedAmount: -2
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0

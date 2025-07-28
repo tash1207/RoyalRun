@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2660763827136121811}
-  - component: {fileID: -264959995230595252}
+  - component: {fileID: -6533914404816256444}
   - component: {fileID: 8393284382036560016}
   m_Layer: 0
   m_Name: Coin Pickup
@@ -66,7 +66,7 @@ Transform:
   - {fileID: 5965922058708978137}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-264959995230595252
+--- !u!114 &-6533914404816256444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6098531215662165595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9573f6dada2147343969dabf10482eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: c705f3032d528c5498554cc2e7d2cb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &8393284382036560016

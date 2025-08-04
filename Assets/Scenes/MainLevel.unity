@@ -650,6 +650,8 @@ MonoBehaviour:
   moveSpeed: 8
   minMoveSpeed: 4
   maxMoveSpeed: 26
+  minGravityZ: -24
+  maxGravityZ: -5
 --- !u!4 &441968917
 Transform:
   m_ObjectHideFlags: 0

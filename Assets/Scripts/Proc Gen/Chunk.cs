@@ -15,11 +15,20 @@ public class Chunk : MonoBehaviour
 
     List<int> availableLanes = new List<int> { 0, 1, 2 };
 
+    LevelGenerator levelGenerator;
+    ScoreManager scoreManager;
+
     void Start()
     {
         SpawnFences();
         SpawnApple();
         SpawnCoins();
+    }
+
+    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager)
+    {
+        this.levelGenerator = levelGenerator;
+        this.scoreManager = scoreManager;
     }
 
     void SpawnFences()
@@ -46,7 +55,10 @@ public class Chunk : MonoBehaviour
 
         Vector3 spawnPosition = new Vector3(
             lanes[selectedLane], transform.position.y, transform.position.z);
-        Instantiate(applePrefab, spawnPosition, Quaternion.identity, transform);
+        Apple newApple =
+            Instantiate(applePrefab, spawnPosition, Quaternion.identity, transform)
+                .GetComponent<Apple>();
+        newApple.Init(levelGenerator);
     }
 
     void SpawnCoins()
@@ -63,7 +75,10 @@ public class Chunk : MonoBehaviour
             float spawnPositionZ = topOfChunkZPos - (i * coinSeparationLength);
             Vector3 spawnPosition = new Vector3(
                 lanes[selectedLane], transform.position.y, spawnPositionZ);
-            Instantiate(coinPrefab, spawnPosition, Quaternion.identity, transform);
+            Coin newCoin =
+                Instantiate(coinPrefab, spawnPosition, Quaternion.identity, transform)
+                    .GetComponent<Coin>();
+            newCoin.Init(scoreManager);
         }
     }
 

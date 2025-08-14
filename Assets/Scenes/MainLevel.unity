@@ -779,11 +779,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraController: {fileID: 176791331}
-  chunkPrefab: {fileID: 1643577282831725879, guid: 0a63ed2ec645fa1418d852f8ecde162a, type: 3}
+  chunkPrefabs:
+  - {fileID: 1643577282831725879, guid: 0a63ed2ec645fa1418d852f8ecde162a, type: 3}
+  - {fileID: 6186806048713720405, guid: a5e61056a0e401e40acfd52fbb075252, type: 3}
+  - {fileID: 6186806048713720405, guid: 5a8aaf520793dfa438983ca861627dc4, type: 3}
+  - {fileID: 6186806048713720405, guid: a55edb427dd7b524e894b5f7576bfcc9, type: 3}
+  - {fileID: 1643577282831725879, guid: 0a63ed2ec645fa1418d852f8ecde162a, type: 3}
+  - {fileID: 1643577282831725879, guid: 0a63ed2ec645fa1418d852f8ecde162a, type: 3}
+  checkpointChunkPrefab: {fileID: 6186806048713720405, guid: d335f4e19ed5cd945bc9a1d2a9f588fa, type: 3}
   chunkParent: {fileID: 1506642747}
   scoreManager: {fileID: 1544138611}
   startingChunksAmount: 12
   chunkLength: 10
+  checkpointChunkInterval: 8
   moveSpeed: 8
   minMoveSpeed: 4
   maxMoveSpeed: 26
@@ -1542,7 +1550,7 @@ MonoBehaviour:
   playerController: {fileID: 639112884}
   timeText: {fileID: 472069110}
   gameOverText: {fileID: 1323368014}
-  startTime: 5
+  startTime: 30
 --- !u!4 &1687092182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6410221756858730007, guid: dcbc89efbe5bd174b99e07c76bd0b6bf, type: 3}
